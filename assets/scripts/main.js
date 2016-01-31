@@ -58,8 +58,8 @@
   var template = function (data) {
     var html = "<div class='sub-reddit card col l4 m6 s12'>" +
           "<div class='card-content red-text'>" +
-            "<a target='_blank' class='col s12' href='" + data.url + "'>" + data.title + "</a>" +
-            "<img class='responsive-img' src='" + data.thumbnail + "' />" +
+          "<a target='_blank' class='col s12' href='" + data.url + "'>" + data.title + "</a>" +
+          "<img class='responsive-img' src='" + data.thumbnail + "' />" +
           "</div>" +
           "</div>";
     return html;
