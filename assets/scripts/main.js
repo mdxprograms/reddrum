@@ -21,8 +21,7 @@
     _.each(obj, function(o) {
       var post = o.data;
       var image = '';
-      var rt = "http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-social-media-logos/099350-glossy-black-icon-social-media-logos-reddit-logo.png";
-      var thumbnail = rt;
+      var thumbnail = "http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-black-icons-social-media-logos/099350-glossy-black-icon-social-media-logos-reddit-logo.png";
 
       if (post.thumbnail != 'self' && post.thumbnail != 'default') {
         thumbnail = post.thumbnail;
@@ -57,10 +56,12 @@
   };
 
   var template = function (data) {
-    var html = "<li><ul>" +
-          "<li><a target='_blank' href='" + data.url + "'>" + data.title + "<a></li>" +
-          "<li><img src='" + data.thumbnail + "' /></li>" +
-          "</ul></li>";
+    var html = "<div class='sub-reddit card col l4 m6 s12'>" +
+          "<div class='card-content red-text'>" +
+            "<a target='_blank' class='col s12' href='" + data.url + "'>" + data.title + "</a>" +
+            "<img class='responsive-img' src='" + data.thumbnail + "' />" +
+          "</div>" +
+          "</div>";
     return html;
   };
 
@@ -68,7 +69,6 @@
     var sub = localStorage.getItem('subReddit');
     var checkReddit;
     getSubReddit(sub);
-    checkReddit = setTimeout(getSubReddit(sub), 8000);
   }
 
   $('#submit').on('click', setSubReddit);

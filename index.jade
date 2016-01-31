@@ -1,8 +1,9 @@
-h1 Welcome to Reddrum.
-h3 What subreddit would you like to read now?
+h1 Reddrum.
 
-.set-sub-reddit
-  input(type="text" id="reddit-url" placeholder="subreddit here")
-  button(id="submit") Pour me a glass
+.set-sub-reddit.card-panel
+  .input-field
+    input(type="text" id="reddit-url" placeholder="Sub json link")
+  button(id="submit" class="btn waves-effect waves-light red") Pour me a glass
   
-ul.sub-reddit-wrap
+.row
+  .sub-reddit-wrap.col.s12
