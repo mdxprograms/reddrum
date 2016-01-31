@@ -1,0 +1,10 @@
+doctype
+html
+  head
+    link(rel="stylesheet" href="assets/styles/main.css")
+  body
+    != yield
+  
+    script(src="./bower_components/jquery/dist/jquery.min.js")
+    script(src="./bower_components/lodash/dist/lodash.min.js")
+    script(src="assets/scripts/main.js")
