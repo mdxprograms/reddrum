@@ -2,19 +2,18 @@
 
   var setSubReddit = function () {
     var sub = $('#reddit-url').val();
-    var url = 'https://www.reddit.com/r/' + sub + '.json';
+    var url = 'https://reddit.com/r/' + sub + '.json';
     $('.sub-reddit-wrap').html('');
-
-    localStorage.setItem('subRedditUrl', url);
-    localStorage.setItem('subRedditTitle', sub);
+    localStorage.setItem('subReddit', url);
     getSubReddit(url);
   };
 
   var getSubReddit = function (url) {
+    $wrap = $('.sub-reddit-wrap');
     $.getJSON(url, function(data) {
       parse(data);
     });
-  };
+  } ;
 
   var parse = function (data) {
     var obj = data.data.children,
@@ -68,8 +67,10 @@
   };
 
   if (localStorage.getItem('subReddit')) {
-    var sub = localStorage.getItem('subRedditUrl');
-    getSubReddit(sub);
+    var sub = localStorage.getItem('subReddit');
+    var checkReddit;
+    console.log(sub);
+    //getSubReddit(sub);
   }
 
   $('#submit').on('click', setSubReddit);
