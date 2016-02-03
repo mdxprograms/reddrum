@@ -67,7 +67,7 @@
     return html;
   };
 
-  if (localStorage.getItem('subReddit')) {
+  if (localStorage.getItem('subRedditUrl')) {
     var sub = localStorage.getItem('subRedditUrl');
     getSubReddit(sub);
   }
