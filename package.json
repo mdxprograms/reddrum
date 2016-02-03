@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A simple reddit feed reader",
   "dependencies": {
-    "harp": "*"
+    "harp": "*",
+    "bower": "*"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
