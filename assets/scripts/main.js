@@ -58,12 +58,9 @@
   };
 
   var template = function (data) {
-    var html = "<div class='sub-reddit card col l4 m6 s12'>" +
-          "<div class='card-content red-text'>" +
+    var html = "<li class='row sub-reddit collection-item'>" +
           "<a target='_blank' class='col s12' href='" + data.url + "'>" + data.title + "</a>" +
-          "<img class='responsive-img' src='" + data.thumbnail + "' />" +
-          "</div>" +
-          "</div>";
+          "</li>";
     return html;
   };
 
